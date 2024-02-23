@@ -1,0 +1,20 @@
+Wymagania:
+Aby program poprawnie zadziałał potrzebny jest dostęp do Internetu, a także zainstalowanie dodatkowych modułów (requests, matplotlib, tkcalendar).
+
+
+Pobieranie danych:
+Dane w programie są pobierane ze strony Narodowego Banku Polskiego (http://api.nbp.pl/). Są to dane o średnich kursach różnych walut z różnych dat lub różnych przedziałów czasowych. Wszystkie kursy obcych walut są podawane w odniesieniu do PLN.
+Strona api.nbp.pl posiada swoje ograniczenia:
+- dane archiwalne o kursach walut są dostępne od 2 stycznia 2002 r.
+- informacje o niektórych walutach obejmują krótszy okres
+- nie można wybierać przedziału czasowego dłuższego niż 365 dni
+- nie można wybierać dat z przyszłości
+Program nie obsługuje części tych wyjątków (aby program zadziałał poprawnie, wybierane dane muszą być poprawne).
+
+Obsługa programu:
+Program działa w oparciu o GUI - Graphical User Interface.
+Po uruchomieniu programu wyświetla się okno. Do wyboru są w nim dwie zakładki (Kalkulator Kursów oraz Analiza Waluty) Można przemieszczać się między nimi klikając na odpowiednią zakładkę. Aby zakończyć działanie programu trzeba kliknąć przycisk zamykania w prawym górnym rogu.
+
+Kalkulator Kursów - w tej zakładce można przeliczać wybraną kwotę w wybranej walucie na inną walutę. W białym polu domyślna wartość kwoty to 100. Można w tym miejscu wpisać dowolną wybraną przez siebie kwotę. Obok pola po prawej stronie znajduje się lista dostępnych walut, z której należy wybrać walutę, która będzie przeliczana. Po prawej stronie strzałki znajduje się lista walut, z której należy wybrać walutę, na którą kwota zostanie przeliczona. Po kliknięciu przycisku "Przelicz Kwotę" w miejscu, gdzie wcześniej był napis "Wybierz obie waluty i kwotę" pojawi się wynik przeliczonej waluty, zaokrąglony do 4 miejsc po przecinku.
+
+Analiza Waluty - w tej zakładce wyświetlane są dane o walucie, a także rysowany jest wykres. Należy z listy dostępnych walut wybrać interesującą nas walutę. Poniżej znajdują się dwa pola z opisem "Data początkowa" i "Data końcowa". W tych miejscach należy wybrać dwie daty. Po kliknięciu przycisku "Wyświetl dane waluty z podanego przedziału" zostanie narysowany wykres przedstawiający zmianę średniego kursu waluty w zadanym przedziale czasowym. Na osi OX umieszczone są daty, natomiast na osi OY umieszczony jest kurs waluty. Po lewej stronie okna wyświetlane są obliczone parametry waluty, zaokrąglone do czterech miejsc po przecinku. Są to: średnia kursu z zadanego przedziału, minimalna i maksymalna wartość kursu waluty oraz YTD czyli procentowa zmiana kursu waluty od początku roku aż do dnia obecnego.
